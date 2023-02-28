@@ -1,0 +1,30 @@
+[default]
+address = "127.0.0.1"
+port = 9224
+workers = 16
+max_blocking = 512
+keep_alive = 5
+ident = "Rocket"
+log_level = "normal"
+temp_dir = "/tmp"
+cli_colors = true
+## NOTE: Don't (!) use this key! Generate your own!
+secret_key = "aVgPVqwcvbGvRWNLpeCe"
+
+[default.tls]
+certs = "path/to/cert-chain.pem"
+key = "path/to/key.pem"
+
+[default.shutdown]
+ctrlc = true
+signals = ["term", "hup"]
+grace = 5
+mercy = 5
+
+[default.limits]
+data-form="50 MiB"
+file = "100 MiB"
+"file/zip" = "50 MiB"
+forms = "20 MiB"
+json = "20 MiB"
+bytes = "20 MiB"

@@ -1,0 +1,13 @@
+{% extends "base" %}
+{% block content %}
+<div class ="container-fluid">
+    <div class ="row">
+        <div class="col-sm-12">
+            <h1>Hi i am {{ first_name }} {{last_name}} </h1>
+            <h2>I live in {{city}} </h2>
+            <h3>I am a proud member of the rust berlin community!</h3>
+            <img src="https://berline.rs/assets/logo.png">
+        </div>
+    </div>
+</div>
+{% endblock content %} 
